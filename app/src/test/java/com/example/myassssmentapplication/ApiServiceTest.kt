@@ -1,5 +1,7 @@
 package com.example.myassssmentapplication
 
+import com.example.myassssmentapplication.data.model.DashboardResponse
+import com.example.myassssmentapplication.data.network.ApiService
 import io.mockk.*
 import org.junit.Assert.*
 import org.junit.Test
