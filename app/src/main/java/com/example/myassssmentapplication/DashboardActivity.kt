@@ -7,10 +7,12 @@ import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.myassssmentapplication.ViewModel.DashboardViewModel
+import com.example.myassssmentapplication.adapter.EntityAdapter
+import com.example.myassssmentapplication.util.AppConfig
 import com.google.gson.Gson
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -22,7 +24,8 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
  * 4. Shows entities in RecyclerView
  * 5. Navigates to DetailsActivity on item tap
  */
-class DashboardActivity : AppCompatActivity() {
+class DashboardActivity : BaseActivity(R.layout.activity_dashboard) {
+
 
     private val dashboardViewModel: DashboardViewModel by viewModel()
 
@@ -33,7 +36,6 @@ class DashboardActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_dashboard)
 
         // Bind UI components
         keypassTextView  = findViewById(R.id.tvKeypass)
@@ -52,8 +54,9 @@ class DashboardActivity : AppCompatActivity() {
         tvEmpty.visibility = View.GONE
 
         // Retrieve stored keypass
-        val keypass = getSharedPreferences("app_prefs", Context.MODE_PRIVATE)
-            .getString("KEYPASS", null)
+        val keypass = getSharedPreferences(AppConfig.PREFS_NAME, Context.MODE_PRIVATE)
+            .getString(AppConfig.KEY_KEYPASS, null)
+
 
         if (keypass.isNullOrEmpty()) {
             Toast.makeText(

@@ -17,14 +17,11 @@ import com.google.gson.JsonSyntaxException
  * It reads a JSON string from the intent, parses it to a Map,
  * and inflates a TextView for each key/value pair.
  */
-class DetailsActivity : AppCompatActivity() {
+class DetailsActivity : BaseActivity(R.layout.activity_details) {
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        // Enable edge-to-edge content
-        enableEdgeToEdge()
-        setContentView(R.layout.activity_details)
-        applyWindowInsets()
 
         val backButton: Button = findViewById(R.id.btnBack)
         backButton.setOnClickListener {
