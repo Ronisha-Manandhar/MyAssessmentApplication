@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -39,6 +40,13 @@ class DashboardActivity : AppCompatActivity() {
         tvDashboardError = findViewById(R.id.tvDashboardError)
         tvEmpty          = findViewById(R.id.tvEmpty)
         recyclerView     = findViewById(R.id.recyclerView)
+
+        val btnLogout = findViewById<Button>(R.id.btnLogout)
+        btnLogout.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            startActivity(intent)
+        }
 
         tvDashboardError.visibility = View.GONE
         tvEmpty.visibility = View.GONE
