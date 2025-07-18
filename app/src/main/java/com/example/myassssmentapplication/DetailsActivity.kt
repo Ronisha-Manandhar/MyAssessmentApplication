@@ -2,8 +2,8 @@ package com.example.myassssmentapplication
 
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 import android.widget.LinearLayout
-import android.widget.ScrollView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -24,6 +24,11 @@ class DetailsActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_details)
         applyWindowInsets()
+
+        val backButton: Button = findViewById(R.id.btnBack)
+        backButton.setOnClickListener {
+            finish() // This goes back to DashboardActivity
+        }
 
         // Retrieve the JSON string passed from DashboardActivity
         val json = intent.getStringExtra("entityJson")
