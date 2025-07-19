@@ -19,8 +19,8 @@ import retrofit2.Response
 /**
  * MainActivity:
  * - Handles user login.
- * - Injects ApiService using Koin for dependency injection.
  * - Validates input and makes login network call.
+ * - Injects ApiService using Koin for dependency injection.
  */
 class MainActivity : AppCompatActivity() {
 
