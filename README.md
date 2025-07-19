@@ -97,35 +97,47 @@ This is a three-screen Android application developed for the NIT3213 final asses
 ## 4. Project Structure
 
 ```text
-app/
-├── adapter/                # RecyclerView Adapter
-│   └── EntityAdapter.kt
-├── base/                   # Shared base activity
-│   └── BaseActivity.kt
-├── data/
-│   ├── model/              # Data classes
-│   │   ├── LoginRequest.kt
-│   │   ├── LoginResponse.kt
-│   │   └── DashboardResponse.kt
-│   └── network/            # Retrofit + API
-│       ├── ApiService.kt
-│       └── RetrofitClient.kt
-├── di/                     # Koin modules
-│   └── AppModules.kt
-├── ui/
-│   ├── MainActivity.kt
-│   ├── DashboardActivity.kt
-│   └── DetailsActivity.kt
-├── util/
-│   └── AppConfig.kt
-├── viewmodel/
-│   └── DashboardViewModel.kt
+MyAssssmentApplication/
+├── app/
+│   ├── build.gradle.kts
+│   └── src/
+│       ├── main/
+│       │   ├── java/
+│       │   │   └── com/example/myassssmentapplication/
+│       │   │       ├── adapter/
+│       │   │       ├── data/
+│       │   │       ├── di/
+│       │   │       ├── util/
+│       │   │       ├── ViewModel/
+│       │   │       │   └── DashboardViewModel.kt
+│       │   │       ├── BaseActivity.kt
+│       │   │       ├── DashboardActivity.kt
+│       │   │       ├── DetailsActivity.kt
+│       │   │       ├── MainActivity.kt
+│       │   │       └── MyApp.kt
+│       │   ├── res/
+│       │   └── AndroidManifest.xml
+│       ├── test/
+│       │   └── java/com/example/myassssmentapplication/
+│       │       ├── ApiServiceTest.kt
+│       │       └── DashboardViewModelTest.kt
+│       └── androidTest/
+│           └── java/com/example/myassssmentapplication/
+│               └── EntityAdapterTest.kt
+├── gradle/
+│   └── wrapper/
+│       ├── gradle-wrapper.jar
+│       └── gradle-wrapper.properties
+├── .gitignore
+├── build.gradle.kts
+├── gradle.properties
+├── gradlew
+├── gradlew.bat
+├── local.properties     <-- (Optional: don't commit)
+├── settings.gradle.kts
+├── README.md
+└── GIT repository link.txt
 
-res/layout/
-├── activity_main.xml
-├── activity_dashboard.xml
-├── activity_details.xml
-└── item_entity.xml
 ````
 
 ---

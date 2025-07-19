@@ -29,7 +29,7 @@ class EntityAdapterTest {
         val viewHolder = adapter.onCreateViewHolder(parent, 0)
         adapter.onBindViewHolder(viewHolder, 0)
 
-        val expected = "Ronisha - 007"
+        val expected = "Name: Ronisha • Id: 007"
         val actual = viewHolder.summaryTextView.text.toString()
         Assert.assertEquals(expected, actual)
     }
