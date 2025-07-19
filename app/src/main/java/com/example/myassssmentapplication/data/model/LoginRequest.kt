@@ -1,6 +1,7 @@
 package com.example.myassssmentapplication.data.model
 
 /**
+ *
  * Request body for the login API.
  *
  * @property username The user’s first name.

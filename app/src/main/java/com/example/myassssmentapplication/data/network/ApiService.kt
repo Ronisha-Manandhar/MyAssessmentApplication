@@ -10,6 +10,7 @@ import retrofit2.http.POST
 import retrofit2.http.Path
 
 /**
+ *
  * Defines API endpoints for authentication and dashboard data.
  * Uses Retrofit annotations to declare HTTP methods and URL paths.
  */

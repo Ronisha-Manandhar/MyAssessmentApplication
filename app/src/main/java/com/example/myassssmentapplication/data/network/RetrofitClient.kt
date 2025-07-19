@@ -5,6 +5,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 /**
+ *
  * Singleton provider for Retrofit and ApiService.
  * Sets up the base URL and JSON converter once, then
  * exposes a single ApiService instance for the app.
