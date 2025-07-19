@@ -12,8 +12,10 @@ import retrofit2.Callback
 import retrofit2.Response
 
 /**
- * ViewModel for fetching dashboard data.
+ *
  * Exposes a list of entities and any error message via LiveData.
+ * ViewModel for fetching dashboard data.
+ *
  */
 class DashboardViewModel(
     private val api: ApiService = RetrofitClient.instance

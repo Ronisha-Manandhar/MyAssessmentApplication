@@ -9,7 +9,6 @@ import com.example.myassssmentapplication.R
 
 /**
  * RecyclerView adapter for displaying a list of entities as summaries.
- *
  * Each entity is a Map<String, Any>. We show up to two fields per item,
  * joined by “ - ”. Clicking an item invokes the provided callback
  * with the full entity map.
