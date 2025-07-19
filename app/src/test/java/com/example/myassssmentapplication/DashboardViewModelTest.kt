@@ -25,7 +25,7 @@ class DashboardViewModelTest {
 
     @Before
     fun setup() {
-        // Mock android.util.Log to prevent test crashes
+        //  Mock android.util.Log to prevent test crashes
         mockkStatic(Log::class)
         every { Log.e(any(), any()) } returns 0
         every { Log.d(any(), any()) } returns 0
