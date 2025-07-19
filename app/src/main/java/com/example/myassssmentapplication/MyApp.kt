@@ -7,6 +7,7 @@ import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 
 /**
+ *
  * Custom Application class.
  * Initializes Koin for dependency injection on app startup.
  */

@@ -7,6 +7,7 @@ import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
 /**
+ *
  * Koin module definitions for dependency injection.
  * Provides network and ViewModel dependencies.
  */
