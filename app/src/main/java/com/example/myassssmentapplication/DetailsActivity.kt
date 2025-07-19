@@ -13,6 +13,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.google.gson.Gson
 import com.google.gson.JsonSyntaxException
 /**
+ *
  * DetailsActivity shows all fields of the selected entity.
  * It reads a JSON string from the intent, parses it to a Map,
  * and inflates a TextView for each key/value pair.
