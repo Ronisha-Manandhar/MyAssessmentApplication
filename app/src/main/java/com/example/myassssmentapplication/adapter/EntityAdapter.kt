@@ -40,8 +40,8 @@ class EntityAdapter(
         val summary = if (entity.isNotEmpty()) {
             entity.entries
                 .take(2)
-                .joinToString(" - ") { (key, value) ->
-                    "$key: ${value.toString()}"
+                .joinToString(" • ") { (key, value) ->
+                    "${key.replaceFirstChar { it.uppercase() }}: ${value.toString()}"
                 }
         } else {
             // Fallback when the map has no entries
